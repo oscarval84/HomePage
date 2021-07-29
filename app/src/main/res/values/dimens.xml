@@ -2,7 +2,11 @@
 <resources>
     <dimen name="home_flow_gap">5dp</dimen>
     <dimen name="buttonTitleSize">15sp</dimen>
-    <dimen name="buttonSubTitleSize">12sp</dimen>
+    <dimen name="buttonSubTitleSize">10sp</dimen>
     <dimen name="buttonMargin">5dp</dimen>
     <dimen name="textMargin">2dp</dimen>
+    <dimen name="imageFrontMargin">5dp</dimen>
+    <dimen name="flowBottom">15dp</dimen>
+    <dimen name="paddingButton">5dp</dimen>
+    <dimen name="imageSize">30dp</dimen>
 </resources>

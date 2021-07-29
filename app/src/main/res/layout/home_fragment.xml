@@ -38,6 +38,7 @@
             android:id="@+id/home_flow"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:paddingBottom="@dimen/flowBottom"
             app:flow_wrapMode="aligned"
             app:flow_horizontalGap="@dimen/home_flow_gap"
             app:flow_verticalGap="@dimen/home_flow_gap"

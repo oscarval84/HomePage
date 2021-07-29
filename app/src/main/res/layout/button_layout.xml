@@ -3,32 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data/>
-    <LinearLayout
-        android:layout_margin="@dimen/buttonMargin"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/paddingButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <ImageView
+            android:id="@+id/imageViewFront"
+            android:layout_width="@dimen/imageSize"
+            android:layout_height="@dimen/imageSize"
+            android:contentDescription="Arrow next"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/imageFrontMargin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
             android:id="@+id/textViewButtonTitle"
-            android:layout_width="match_parent"
+            style="@style/TitleTextStyle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/buttonTitleSize"
-            android:scrollHorizontally="true"
             android:ellipsize="end"
+            android:gravity="start"
             android:maxLines="1"
-            android:gravity="left"
-            />
-
+            android:layout_marginStart="@dimen/imageFrontMargin"
+            android:scrollHorizontally="true"
+            app:layout_constraintStart_toEndOf="@id/imageViewFront"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewArrow"/>
         <TextView
             android:id="@+id/textViewButtonSubtitle"
-            android:layout_width="match_parent"
+            style="@style/SubTitleTextStyle"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/buttonSubTitleSize"
-            android:scrollHorizontally="true"
             android:ellipsize="end"
+            android:gravity="start"
             android:maxLines="1"
-            android:gravity="left" />
-    </LinearLayout>
+            android:layout_marginStart="@dimen/imageFrontMargin"
+            android:scrollHorizontally="true"
+            app:layout_constraintStart_toEndOf="@id/imageViewFront"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewArrow"/>
+
+        <ImageView
+            android:id="@+id/imageViewArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Arrow next"
+            android:src="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
